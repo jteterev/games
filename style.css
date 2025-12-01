@@ -102,7 +102,7 @@ span {
 
 .about-games {
   background-color: #202027;
-  padding-top: 94px;
+  padding: 94px 0 50px;
 }
 .about-games__title {
   font-weight: 700;
