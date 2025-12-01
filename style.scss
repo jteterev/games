@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Montserrat;
+}
+
+.center {
+    padding-left: calc(50% - 600px);
+    padding-right: calc(50% - 600px);
+}
+span {
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 24px;
+    line-height: 32px;
+    vertical-align: middle;
+}
+
+.header {
+    position: relative;
+    background-color: #E1FF8F;
+
+
+    &__title {
+        position: relative;
+        z-index: 2;
+        padding: 196px 0 24px;
+        font-weight: 700;
+        font-style: Bold;
+        font-size: 64px;
+        line-height: 100%;
+        vertical-align: middle;
+    }
+
+    &__description {
+        position: relative;
+        z-index: 2;
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 24px;
+        line-height: 32px;
+        vertical-align: middle;
+        padding-bottom: 48px;
+    }
+
+    &__btn {
+        position: relative;
+        z-index: 2;
+        padding-bottom: 246px;
+    }
+    
+    &__btn--go {
+        width: 247;
+        height: 66;
+        opacity: 1;
+        gap: 10px;
+        border-width: 1px;
+        border-radius: 60px;
+        padding-top: 16px;
+        padding-right: 28px;
+        padding-bottom: 16px;
+        padding-left: 28px;
+        font-family: Montserrat;
+        font-weight: 600;
+        font-style: SemiBold;
+        font-size: 24px;
+        line-height: 142%;
+        letter-spacing: 0%;
+        text-align: center;
+        color: #ffffff;
+        background-color: #202027;
+
+    }
+
+    &__star {
+        z-index: 1;
+    }
+    &__star1 {
+        position: absolute;
+        top: 69px;
+        left: 156px;
+    }
+
+    &__star2 {
+        position: absolute;
+        top: 94px;
+        left: 63px;
+    }
+
+    &__star3 {
+        position: absolute;
+        bottom: 225px;
+        right: 455px;
+    }
+
+    &__star4 {
+        position: absolute;
+        bottom: 149px;
+        right: 344px;
+    }
+
+    &__bigstar {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+}
