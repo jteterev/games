@@ -98,4 +98,54 @@ span {
   position: absolute;
   top: 0;
   right: 0;
+}
+
+.about-games {
+  background-color: #202027;
+  padding-top: 94px;
+}
+.about-games__title {
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 64px;
+  line-height: 100%;
+  vertical-align: middle;
+  color: #ffffff;
+  margin-bottom: 24px;
+}
+.about-games__description {
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 24px;
+  line-height: 32px;
+  vertical-align: middle;
+  color: #ffffff;
+  margin-bottom: 72px;
+}
+.about-games__table {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+.about-games__game-card {
+  background-color: #ffffff;
+  border-radius: 30px;
+}
+.about-games__game-number {
+  color: #202027;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 16px;
+  line-height: 110%;
+  vertical-align: bottom;
+  margin: 32px 0 16px 32px;
+}
+.about-games__game-title {
+  color: #202027;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  vertical-align: middle;
+  margin: 0 0 36px 32px;
 }/*# sourceMappingURL=style.css.map */
