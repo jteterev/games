@@ -21,6 +21,11 @@ span {
   vertical-align: middle;
 }
 
+.page-wrapper {
+  background-color: #202027;
+  min-height: 100vh;
+}
+
 .header {
   position: relative;
   background-color: #E1FF8F;
@@ -51,25 +56,37 @@ span {
   padding-bottom: 246px;
 }
 .header__btn--go {
-  width: 247;
-  height: 66;
-  opacity: 1;
-  gap: 10px;
-  border-width: 1px;
+  min-width: 247px;
+  min-height: 66px;
+  max-height: 66px;
+  border: 1px solid transparent;
   border-radius: 60px;
-  padding-top: 16px;
-  padding-right: 28px;
-  padding-bottom: 16px;
-  padding-left: 28px;
+  padding: 0;
+  background-color: #202027;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.header__btn-link {
+  text-decoration: none;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 16px 28px;
+  border-radius: 60px;
   font-family: Montserrat;
   font-weight: 600;
-  font-style: SemiBold;
   font-size: 24px;
   line-height: 142%;
-  letter-spacing: 0%;
   text-align: center;
+}
+.header__btn-link:link, .header__btn-link:visited, .header__btn-link:hover, .header__btn-link:active, .header__btn-link:focus {
+  text-decoration: none;
   color: #ffffff;
-  background-color: #202027;
 }
 .header__star {
   z-index: 1;
@@ -101,8 +118,18 @@ span {
 }
 
 .about-games {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
   background-color: #202027;
-  padding-top: 94px;
+  padding: 94px 0 50px;
+}
+.about-games__images {
+  width: 100%;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 40px 40px 0 0;
 }
 .about-games__title {
   font-weight: 700;
@@ -123,18 +150,52 @@ span {
   margin-bottom: 72px;
 }
 .about-games__table {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
+  -moz-column-count: 3;
+       column-count: 3;
+  -moz-column-gap: 32px;
+       column-gap: 32px;
 }
 .about-games__game-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background-color: #ffffff;
-  border-radius: 30px;
+  border-radius: 40px;
+  margin: 0 0 32px;
+  -moz-column-break-inside: avoid;
+       break-inside: avoid-column;
+  break-inside: avoid;
+  page-break-inside: avoid;
+  width: 100%;
+  height: auto;
+  max-height: none;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+.about-games__game-card:hover {
+  transform: scale(1.05);
+}
+.about-games__game-card:nth-child(1) {
+  min-height: 473px;
+}
+.about-games__game-card:nth-child(2) {
+  min-height: 551px;
+}
+.about-games__game-card:nth-child(3) {
+  min-height: 512px;
+}
+.about-games__game-card:nth-child(4) {
+  min-height: 550px;
+}
+.about-games__game-card:nth-child(5) {
+  min-height: 473px;
+}
+.about-games__game-card:nth-child(6) {
+  min-height: 551px;
 }
 .about-games__game-number {
   color: #202027;
   font-weight: 500;
-  font-style: Medium;
   font-size: 16px;
   line-height: 110%;
   vertical-align: bottom;
@@ -148,4 +209,5 @@ span {
   letter-spacing: 0px;
   vertical-align: middle;
   margin: 0 0 36px 32px;
+  flex: 1;
 }/*# sourceMappingURL=style.css.map */
