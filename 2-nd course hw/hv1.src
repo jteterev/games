@@ -1,0 +1,47 @@
+//задание 1
+let a = 10;
+alert(a);
+a = 20;
+alert(a);
+//задание 2
+let firstIphoneYear = 2007;
+alert(firstIphoneYear);
+//задание 3
+let creatorName = "Brendan Eich";
+alert(creatorName);
+//задание 4
+let a = 10;
+let b = 2;
+alert("Сумма: " + (a + b));
+alert("Разность: " + (a - b));
+alert("Произведение: " + (a * b));
+alert("Частное: " + (a / b));
+//задание 5
+let result = 2 ** 5;
+alert(result);
+//задание 6
+let a = 9;
+let b = 2;
+let result = a % b;
+alert(result);
+//задание 7
+let num = 1;
+num += 5;
+num -= 3;
+num *= 7;
+num /= 3;
+num++;
+num--;
+alert(num);
+//задание 8
+let age = prompt("Сколько вам лет?");
+alert(age);
+//задание 9
+let user = {
+    name: "Евгений",
+    age: 24,
+    isAdmin: true
+};
+//задание 10
+let userName = prompt("Как вас зовут?");
+alert(`Привет, ${userName}!`);
