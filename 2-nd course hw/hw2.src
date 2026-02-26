@@ -60,4 +60,3 @@ if (monthNumber >= 1 && monthNumber <= 12) {
 } else {
   console.log('Ошибка: номер месяца должен быть от 1 до 12');
 }
-//задание 6
