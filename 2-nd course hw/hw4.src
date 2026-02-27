@@ -1,0 +1,134 @@
+//задание 1
+
+function getMinNumber(a, b) {
+  return a < b ? a : b;
+}
+
+console.log(getMinNumber(8, 4));
+console.log(getMinNumber(6, 6));
+
+//задание 2
+
+const checkEvenOdd = (n) => n % 2 === 0 ? 'Число четное' : 'Число нечетное';
+
+console.log(checkEvenOdd(22));
+console.log(checkEvenOdd(33));
+
+//задание 3
+
+function printSquare(num) {
+  console.log(num * num);
+}
+
+printSquare(5);  // В консоли: 25
+printSquare(8);  // В консоли: 64
+printSquare(10); // В консоли: 100
+
+let result = printSquare(4); // В консоли: 16
+console.log(result);
+
+function getSquare(num) {
+  return num * num;
+}
+
+let result1 = getSquare(5);
+console.log(result1); // 25
+
+let result2 = getSquare(8);
+console.log(result2); // 64
+
+let sum = getSquare(3) + getSquare(4);
+console.log(sum); // 25 (9 + 16)
+
+let area = getSquare(10);
+console.log('Площадь квадрата со стороной 10:', area);
+
+//задание 4
+
+function checkAge() {
+  let age = Number(prompt('Сколько вам лет?'));
+  
+  if (isNaN(age) || age < 0) {
+    alert('Вы ввели неправильное значение');
+  } else if (age <= 12) {
+    alert('Привет, друг!');
+  } else {
+    alert('Добро пожаловать!');
+  }
+}
+
+checkAge();
+
+//задание 5
+
+function multiplyNumbers(a, b) {
+  if (isNaN(a) || isNaN(b) || typeof a !== 'number' || typeof b !== 'number') {
+    return 'Одно или оба значения не являются числом';
+  }
+  
+  return a * b;
+}
+
+console.log(multiplyNumbers(5, 3));    
+console.log(multiplyNumbers(10, 2.5)); 
+console.log(multiplyNumbers(7, '3'));  
+console.log(multiplyNumbers('abc', 5));
+console.log(multiplyNumbers('2', '3'));
+console.log(multiplyNumbers(true, 5)); 
+console.log(multiplyNumbers(null, 10));
+console.log(multiplyNumbers(undefined, 8));
+
+//задание 6
+
+function cubeNumber() {
+  let input = prompt('Введите число:');
+  
+  if (input === null) {
+    return 'Переданный параметр не является числом';
+  }
+  
+  let num = Number(input);
+  
+  if (isNaN(num)) {
+    return 'Переданный параметр не является числом';
+  }
+
+  let cube = num * num * num;
+  return `${num} в кубе равняется ${cube}`;
+}
+
+console.log(cubeNumber());
+
+//задание 7
+
+const circle1 = {
+  radius: 5,
+  
+  getArea() {
+    return Math.PI * this.radius * this.radius;
+  },
+  
+  getPerimeter() {
+    return 2 * Math.PI * this.radius;
+  }
+};
+
+const circle2 = {
+  radius: 10,
+  
+  getArea() {
+    return Math.PI * this.radius * this.radius;
+  },
+  
+  getPerimeter() {
+    return 2 * Math.PI * this.radius;
+  }
+};
+
+console.log('circle1 (радиус = 5):');
+console.log('Площадь:', circle1.getArea());
+console.log('Периметр:', circle1.getPerimeter());
+
+console.log('\ncircle2 (радиус = 10):');
+console.log('Площадь:', circle2.getArea());
+console.log('Периметр:', circle2.getPerimeter());
