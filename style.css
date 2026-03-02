@@ -245,14 +245,14 @@ span {
 }
 .page-wrapper__star3 {
   position: absolute;
-  top: 1563px;
+  top: 1513px;
   right: 123px;
   z-index: 1;
   pointer-events: none;
 }
 .page-wrapper__star4 {
   position: absolute;
-  top: 1596px;
+  top: 1546px;
   right: 44px;
   z-index: 1;
   pointer-events: none;
@@ -413,7 +413,6 @@ span {
 }
 
 .mini-games {
-  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -491,6 +490,11 @@ span {
     background-color: #fff;
     border-color: #202027;
     color: #202027;
+  }
+}
+@media (max-width: 768px) {
+  .mini-games__btn--go {
+    min-height: 55px;
   }
 }
 .mini-games__btn-link {
