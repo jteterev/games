@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Все задания по DOM</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        h1, h2 {
+            color: #333;
+        }
+        
+        .task {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border-left: 4px solid #4CAF50;
+        }
+        
+        .task h2 {
+            margin-top: 0;
+            color: #4CAF50;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+        
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            margin: 5px;
+            transition: background-color 0.3s;
+        }
+        
+        button:hover {
+            background-color: #45a049;
+        }
+        
+        .description {
+            background-color: #e8f5e9;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 5px 0;
+        }
+        
+        .demo-area {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        
+        .note {
+            color: #666;
+            font-style: italic;
+            font-size: 14px;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Все задания по DOM JavaScript</h1>
+    
+    <!-- Задание 1: Скрытие и показ текста -->
+    <div class="task" id="task1">
+        <h2>Задание 1. Скрытие и показ текста</h2>
+        <div class="demo-area">
+            <h1 id="task1-title">Это скрываемый заголовок!</h1>
+            <button id="task1-button">Скрыть</button>
+        </div>
+    </div>
+    
+    <!-- Задание 2: Изменение стиля элемента -->
+    <div class="task" id="task2">
+        <h2>Задание 2. Изменение стиля элемента</h2>
+        <div class="demo-area">
+            <p id="task2-text">Это текст, который станет синим при нажатии на кнопку.</p>
+            <button id="task2-button">Изменить цвет</button>
+        </div>
+    </div>
+    
+    <!-- Задание 3: Динамическое изменение текста -->
+    <div class="task" id="task3">
+        <h2>Задание 3. Динамическое изменение текста</h2>
+        <div class="demo-area">
+            <h1 id="task3-title">Старый текст</h1>
+            <button id="task3-button">Изменить текст</button>
+        </div>
+    </div>
+    
+    <!-- Задание 4: Поиск и изменение элементов по классу -->
+    <div class="task" id="task4">
+        <h2>Задание 4. Поиск и изменение элементов по классу</h2>
+        <div class="demo-area">
+            <p class="description">Элемент 1 с классом description</p>
+            <p class="description">Элемент 2 с классом description</p>
+            <p>Обычный элемент без класса</p>
+            <p class="description">Элемент 3 с классом description</p>
+            <button id="task4-button">Изменить все description</button>
+        </div>
+    </div>
+    
+    <!-- Задание 5: Работа с querySelectorAll -->
+    <div class="task" id="task5">
+        <h2>Задание 5. Работа с querySelectorAll</h2>
+        <div class="demo-area">
+            <p class="description">Первый абзац с классом description</p>
+            <p class="description">Второй абзац с классом description</p>
+            <p class="other-class">Абзац с другим классом</p>
+            <p class="description">Третий абзац с классом description</p>
+            <button id="task5-button">Изменить текст description</button>
+        </div>
+    </div>
+    
+    <!-- Задание 6: Добавление нового элемента -->
+    <div class="task" id="task6">
+        <h2>Задание 6. Добавление нового элемента</h2>
+        <div class="demo-area" id="task6-container">
+            <p>Существующий абзац</p>
+            <button id="task6-button">Добавить элемент</button>
+        </div>
+    </div>
+    
+    <!-- Задание 7: Удаление элемента -->
+    <div class="task" id="task7">
+        <h2>Задание 7. Удаление элемента</h2>
+        <div class="demo-area">
+            <p class="description">Первый description (будет удален)</p>
+            <p class="description">Второй description</p>
+            <p class="description">Третий description</p>
+            <button id="task7-button">Удалить первый description</button>
+        </div>
+    </div>
+
+    <script>
+        //Задание 1: Скрытие и показ текста
+        const title1 = document.querySelector('#task1-title');
+        const button1 = document.querySelector('#task1-button');
+        
+        button1.addEventListener('click', function() {
+            if (title1.style.display === 'none') {
+                title1.style.display = 'block';
+                button1.textContent = 'Скрыть';
+            } else {
+                title1.style.display = 'none';
+                button1.textContent = 'Показать';
+            }
+        });
+        
+        //Задание 2: Изменение стиля элемента
+        const paragraph2 = document.querySelector('#task2-text');
+        const button2 = document.querySelector('#task2-button');
+        
+        button2.addEventListener('click', function() {
+            paragraph2.style.color = 'blue';
+            paragraph2.style.fontWeight = 'bold';
+        });
+        
+        //Задание 3: Динамическое изменение текста
+        const title3 = document.querySelector('#task3-title');
+        const button3 = document.querySelector('#task3-button');
+        
+        button3.addEventListener('click', function() {
+            title3.textContent = 'Привет, мир!';
+        });
+        
+        //Задание 4: Поиск и изменение элементов по классу
+        const button4 = document.querySelector('#task4-button');
+        
+        button4.addEventListener('click', function() {
+            const descriptionElements = document.querySelectorAll('#task4 .description');
+            descriptionElements.forEach(element => {
+                element.textContent = 'Измененный текст';
+                element.style.backgroundColor = '#ffeb3b';
+            });
+        });
+        
+        //Задание 5: Работа с querySelectorAll
+        const button5 = document.querySelector('#task5-button');
+        
+        button5.addEventListener('click', function() {
+            const descriptionElements = document.querySelectorAll('#task5 .description');
+            descriptionElements.forEach(element => {
+                element.textContent = 'Новый текст';
+                element.style.color = 'green';
+                element.style.fontWeight = 'bold';
+            });
+        });
+        
+        //Задание 6: Добавление нового элемента
+        const button6 = document.querySelector('#task6-button');
+        const container6 = document.querySelector('#task6-container');
+        
+        button6.addEventListener('click', function() {
+            const newParagraph = document.createElement('p');
+            newParagraph.textContent = 'Новый абзац';
+            newParagraph.style.color = 'purple';
+            newParagraph.style.fontStyle = 'italic';
+            container6.appendChild(newParagraph);
+        });
+        
+        //Задание 7: Удаление элемента
+        const button7 = document.querySelector('#task7-button');
+        
+        button7.addEventListener('click', function() {
+            const firstDescription = document.querySelector('#task7 .description');
+            if (firstDescription) {
+                firstDescription.remove();
+            } else {
+                alert('Больше нет элементов для удаления!');
+            }
+        });      
+    </script>
+</body>
+</html>
