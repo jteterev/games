@@ -77,6 +77,7 @@ span {
   padding-bottom: 246px;
 }
 .header__btn--go {
+  display: inline-block;
   min-width: 247px;
   min-height: 66px;
   max-height: 66px;
@@ -85,9 +86,7 @@ span {
   padding: 0;
   background-color: #202027;
   cursor: pointer;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
+  text-decoration: none;
 }
 .header__btn--go:hover {
   background-color: #fff;
@@ -221,6 +220,7 @@ span {
   position: relative;
   padding-bottom: 144px;
   z-index: 0;
+  overflow: hidden;
 }
 .page-wrapper__bigstar {
   position: absolute;
@@ -284,7 +284,6 @@ span {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  background-color: #202027;
   padding: 94px 0 50px;
   position: relative;
 }
@@ -525,6 +524,9 @@ span {
 @media (max-width: 768px) {
   .mini-games__title {
     padding: 48px 0 48px;
+    font-weight: 700;
+    font-size: 40px;
+    vertical-align: middle;
   }
   .mini-games__game-card, .mini-games__game-left, .mini-games__game-right {
     grid-template-columns: 1fr;
